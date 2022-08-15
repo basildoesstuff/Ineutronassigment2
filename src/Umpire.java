@@ -17,16 +17,27 @@ public class Umpire {
     numFromPlayer3=p3.guessNumber();
     }
  void compare(){
-      if(numFromGuesser==numFromPlayer1){
-          System.out.println("Player 1 won the game");
-      }
-      else if(numFromGuesser==numFromPlayer2){
-         System.out.println("Player 2 won the game");
+     if(numFromPlayer1 != numFromPlayer2 && numFromPlayer2!=numFromPlayer3 && numFromPlayer1 !=numFromPlayer3) {
+         if (numFromGuesser == numFromPlayer1) {
+             System.out.println("Player 1 won the game");
+         } else if (numFromGuesser == numFromPlayer2) {
+             System.out.println("Player 2 won the game");
+         } else if (numFromGuesser == numFromPlayer3) {
+             System.out.println("Player 3 won the game");
+         } else
+             System.out.println("All the players lost");
      }
-      else if(numFromGuesser==numFromPlayer3){
-          System.out.println("Player 3 won the game");
-      }
-      else
-          System.out.println("All the players lost");
+     if(numFromGuesser== numFromPlayer1&&numFromGuesser==numFromPlayer2){
+         System.out.println("Player 1 & 2 Guess the number right");
+     }
+     if(numFromGuesser== numFromPlayer2&&numFromGuesser==numFromPlayer3){
+         System.out.println("Player 2 & 3 Guess the number right");
+     }
+     if(numFromGuesser== numFromPlayer1&&numFromGuesser==numFromPlayer3){
+         System.out.println("Player 1 & 3 Guess the number right");
+     }
+     if(numFromGuesser== numFromPlayer1 && numFromGuesser==numFromPlayer3 && numFromGuesser==numFromPlayer3){
+         System.out.println("Player 1,2 & 3 Guess the number right");
+     }
  }
 }
